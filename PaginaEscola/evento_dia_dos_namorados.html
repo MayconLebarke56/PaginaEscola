@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia dos Namorados - Evento</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container">
+        <div class="event-content">
+            <div class="event">
+                <h3 class="event-title">Dia dos Namorados</h3>
+                
+
+                <body>
+                <h1 class="event-titlos">
+
+                    Preparem-se para um dia mágico repleto de corações e sorrisos enquanto transformamos nossa escola em um verdadeiro refúgio de amor e diversão. No Dia dos Namorados deste ano, vamos celebrar não apenas romances, mas também a amizade e a camaradagem que nos unem como uma comunidade.</h1>
+                </body>
+
+                <h1>
+                    A partir da entrada decorada com balões em tons suaves de rosa e vermelho, até os corredores adornados com guirlandas brilhantes e mensagens carinhosas, cada canto da escola estará radiante de amor.
+                </h1>
+
+                <h1>
+                    Durante o dia, não faltarão atividades emocionantes para todos participarem, desde jogos divertidos que desafiam o coração até competições que aquecem a alma. Estimularemos a criatividade com estações de arte onde poderão fazer lembranças especiais para amigos e entes queridos.
+                </h1>
+                
+                <h1>
+                    Não se esqueçam de saborear deliciosos petiscos temáticos, como cupcakes decorados com corações açucarados e cookies em formato de amor. E para adicionar ainda mais magia, teremos uma playlist cuidadosamente selecionada para animar nossos corações e até mesmo uma pequena dança para celebrar juntos este dia especial.
+                </h1>
+
+                <h1>
+                    As inscrições deverão ser realizadas entre 01 de junho de 2024, até 10 de junho de 2024, às 23h59 (horário de Brasília). O professor orientador ou professora orientadora devem se responsabilizar pela inscrição.
+                </h1>
+                
+                <div class="event-details">
+                    <p><strong>Data:</strong> 12 de junho de 2024</p>
+                    <p><strong>Horário:</strong> A partir das 18h</p>
+                </div>
+
+            </div>
+                <img src="img/img/dia-dos-namorados.webp" alt="Feira de Ciências" class="event-img">
+            </div>
+
+       <!-- Formulário de Cadastro -->
+       <div id="formulario" class="form-section">
+        <div class="form-header">
+            <h3 id="cadastroForm" class="cadastro-title">
+                Formulário de Cadastro
+                <img src="img/img/370d28a2bae11e97331d48f75cc731ea.png" alt="Bandeirinha" class="bandeirinha-img">
+            </h3>
+        </div>
+          
+                <form onsubmit="return cadastrar(event)">
+                    <label for="nome">Seu Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    <span id="error-nome" class="error"></span>
+                    
+                    <label for="nome_amada">Nome do parceiro(a):</label>
+                    <input type="text" id="nome_amada" name="nome_amada" required>
+                    <span id="error-nome-amada" class="error"></span>
+                    
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span id="error-email" class="error"></span>
+                    
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" pattern="[0-9]{10,11}" required>
+                    <span class="hint">Formato: 1234567890 ou 12345678901 (somente números)</span>
+                    <span id="error-telefone" class="error"></span>
+                    
+                    <label for="idade">Idade:</label>
+                    <input type="number" id="idade" name="idade" min="18" required>
+                    <span id="error-idade" class="error"></span>
+        
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade" required>
+                    <span id="error-cidade" class="error"></span>
+        
+                    <label for="estado">Seu Estado:</label>
+                    <select id="estado" name="estado" required>
+                        <option value="">Selecione seu estado</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                    <span id="error-estado" class="error"></span>
+        
+                    <label for="mensagem">Correio do Amor mande sua mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                    <span id="error-mensagem" class="error"></span>
+        
+                    <input type="submit" value="Cadastrar">
+                </form>
+        
+                <div id="confirmation" class="confirmation">
+                    <img src="img/img/370d28a2bae11e97331d48f75cc731ea.png" alt="Balão de Festa" class="balao">
+                    <span id="confirmation-message"></span>
+                </div>
+        
+                <script>
+                    function cadastrar(event) {
+                        event.preventDefault(); // Impede o envio padrão do formulário
+        
+                        // Obter valores do formulário
+                        const nome = document.getElementById('nome').value.trim();
+                        const nomeAmada = document.getElementById('nome_amada').value.trim();
+                        const email = document.getElementById('email').value.trim();
+                        const telefone = document.getElementById('telefone').value.trim();
+                        const idade = document.getElementById('idade').value.trim();
+                        const cidade = document.getElementById('cidade').value.trim();
+                        const estado = document.getElementById('estado').value;
+                        const mensagem = document.getElementById('mensagem').value.trim();
+        
+                        // Validar os campos
+                        let valid = true;
+        
+                        // Validar nome
+                        if (nome === '') {
+                            document.getElementById('error-nome').innerText = 'Por favor, preencha este campo.';
+                            valid = false;
+                        } else {
+                            document.getElementById('error-nome').innerText = '';
+                        }
+        
+                        // Validar nome da amada
+                        if (nomeAmada === '') {
+                            document.getElementById('error-nome-amada').innerText = 'Por favor, preencha este campo.';
+                            valid = false;
+                        } else {
+                            document.getElementById('error-nome-amada').innerText = '';
+                        }
+        
+                        // Validar email
+                        if (email === '') {
+                            document.getElementById('error-email').innerText = 'Por favor, preencha este campo.';
+                            valid = false;
+                        } else {
+                            document.getElementById('error-email').innerText = '';
+                        }
+        
+                        // Validar telefone
+                        if (!telefone.match(/^\d{10,11}$/)) {
+                            document.getElementById('error-telefone').innerText = 'Por favor, insira um número de telefone válido (apenas números).';
+                            valid = false;
+                        } else {
+                            document.getElementById('error-telefone').innerText = '';
+                        }
+        
+                        // Validar idade
+                        if (idade === '' || parseInt(idade) < 18) {
+                            document.getElementById('error-idade').innerText = 'Você precisa ter pelo menos 18 anos para participar.';
+                            valid = false;
+                        } else {
+                            document.getElementById('error-idade').innerText = '';
+                        }
+        
+                        // Validar cidade
+                        if (cidade === '') {
+                            document.getElementById('error-cidade').innerText = 'Por favor, preencha este campo.';
+                            valid = false;
+                        } else {
+                            document.getElementById('error-cidade').innerText = '';
+                        }
+        
+                        // Validar estado
+                        if (estado === '') {
+                            document.getElementById('error-estado').innerText = 'Por favor, selecione um estado.';
+                            valid = false;
+                        } else {
+                            document.getElementById('error-estado').innerText = '';
+                        }
+        
+                        // Validar mensagem
+                        if (mensagem === '') {
+                            document.getElementById('error-mensagem').innerText = 'Por favor, escreva uma mensagem para enviar.';
+                            valid = false;
+                        } else {
+                            document.getElementById('error-mensagem').innerText = '';
+                        }
+        
+                        // Se todos os campos forem válidos, simular um processo de cadastro
+                        if (valid) {
+                            const confirmationDiv = document.getElementById('confirmation');
+                            confirmationDiv.style.display = 'block';
+                            document.getElementById('confirmation-message').innerText = `Cadastro realizado com sucesso para ${nome} (${email})!`;
+        
+                            // Limpar o formulário após o cadastro
+                            document.querySelector('form').reset();
+        
+                            // Esconder mensagem após 5 segundos
+                            setTimeout(function() {
+                                confirmationDiv.style.display = 'none';
+                            }, 5000);
+                        }
+        
+                        return false; // Para garantir que o formulário não seja enviado
+                    }
+                </script>
+            </div>
+        </body>
+        </html>

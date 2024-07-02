@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feira de Ciências - Evento</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="container">
+        <div class="event-content">
+            <div class="event">
+                <h3 class="event-title">Feira de Ciências</h3>
+                
+
+                <body>
+                <h1 class="event-titlos">
+                    
+                    Está chegando a nossa grande Feira de Ciências, um evento que vai transformar nossa escola em um verdadeiro laboratório de descobertas! Preparem-se para explorar experimentos fascinantes, projetos inovadores e ideias criativas que vão inspirar a todos.</h1>
+                </body>
+
+                <h1>
+                    Imagine salas repletas de máquinas funcionando, displays coloridos exibindo dados intrigantes e estudantes entusiasmados explicando suas hipóteses e conclusões. É uma celebração do conhecimento, da curiosidade e da criatividade, onde cada passo revela uma nova perspectiva sobre o mundo que nos cerca.
+                </h1>
+
+                <h1>
+                    Para os visitantes - pais, professores e colegas de outras turmas - será uma oportunidade única de se maravilhar com as mentes brilhantes que moldam o futuro da ciência. Todos estão convidados a mergulhar nesse ambiente vibrante e participar de uma experiência que vai além das páginas dos livros didáticos.
+                </h1>
+                
+                <h1>
+                    Na Feira de Ciências, não apenas aprendemos, mas celebramos o poder da investigação e da inovação. Estamos ansiosos para compartilhar essa jornada com vocês e testemunhar o impacto transformador que a paixão pelo conhecimento pode trazer para nossas vidas. Preparem-se para uma aventura que vai estimular a mente e aquecer o coração.
+                </h1>
+
+                <h1>
+                    As inscrições deverão ser realizadas entre 01 de junho de 2024, até 15 de junho de 2024, às 23h59 (horário de Brasília). O professor orientador ou professora orientadora devem se responsabilizar pela inscrição do aluno.
+                </h1>
+                <div class="event-details">
+                    <p><strong>Data:</strong> 28 de junho de 2024</p>
+                    <p><strong>Horário:</strong> A partir das 17h</p>
+                </div>
+        
+                
+            </div>
+            <img src="img/img/Screenshot_12.png" alt="Quadrilha Junina" class="event-img">
+        </div>
+        
+            <!-- Formulário de Cadastro -->
+            <div id="formulario" class="form-section">
+                <div class="form-header">
+                    <h3 id="cadastroForm" class="cadastro-title">
+                        Formulário de Cadastro
+                        <img src="img/img/pngwing.com.png" alt="Bandeirinha" class="bandeirinha-img">
+                    </h3>
+                </div>
+                
+                <form onsubmit="return cadastrar(event)">
+                    <div class="form-content">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                        <span id="error-nome" class="error"></span>
+                        
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                        <span id="error-email" class="error"></span>
+                        
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" pattern="[0-9]{10,11}" required>
+                        <span class="hint">Formato: 1234567890 ou 12345678901 (somente números)</span>
+                        <span id="error-telefone" class="error"></span>
+                        
+                        <label for="idade">Idade:</label>
+                        <input type="number" id="idade" name="idade" min="18" required>
+                        <span id="error-idade" class="error"></span>
+
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" id="cidade" name="cidade" required>
+                        <span id="error-cidade" class="error"></span>
+
+                        <label for="estado">Estado:</label>
+                        <select id="estado" name="estado" required>
+                            <option value="">Selecione seu estado</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                        <span id="error-estado" class="error"></span>
+                        
+                        <!-- Novo campo: Nome do Projeto -->
+                        <label for="nome-projeto">Nome do Projeto:</label>
+                        <input type="text" id="nome-projeto" name="nome-projeto" required>
+                        <span id="error-nome-projeto" class="error"></span>
+                        
+                        <input type="submit" value="Cadastrar">
+                    </div>
+                </form>
+        
+                <!-- Componente de Confirmação -->
+                <div id="confirmation" class="confirmation">
+                    <img src="img/img/arco.png" alt="Balão de Festa" class="balao">
+                    <span id="confirmation-message"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script JavaScript -->
+    <script>
+        function cadastrar(event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            // Obter valores do formulário
+            const nome = document.getElementById('nome').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const telefone = document.getElementById('telefone').value.trim();
+            const idade = document.getElementById('idade').value.trim();
+            const cidade = document.getElementById('cidade').value.trim();
+            const estado = document.getElementById('estado').value;
+            const nomeProjeto = document.getElementById('nome-projeto').value.trim(); // Novo campo
+
+            // Validar os campos
+            let valid = true;
+
+            // Validar nome
+            if (nome === '') {
+                document.getElementById('error-nome').innerText = 'Por favor, preencha este campo.';
+                valid = false;
+            } else {
+                document.getElementById('error-nome').innerText = '';
+            }
+
+            // Validar email
+            if (email === '') {
+                document.getElementById('error-email').innerText = 'Por favor, preencha este campo.';
+                valid = false;
+            } else {
+                document.getElementById('error-email').innerText = '';
+            }
+
+            // Validar telefone
+            if (!telefone.match(/^\d{10,11}$/)) {
+                document.getElementById('error-telefone').innerText = 'Por favor, insira um número de telefone válido (apenas números).';
+                valid = false;
+            } else {
+                document.getElementById('error-telefone').innerText = '';
+            }
+
+            // Validar idade
+            if (idade === '' || parseInt(idade) < 18) {
+                document.getElementById('error-idade').innerText = 'Você precisa ter pelo menos 18 anos para participar.';
+                valid = false;
+            } else {
+                document.getElementById('error-idade').innerText = '';
+            }
+
+            // Validar cidade
+            if (cidade === '') {
+                document.getElementById('error-cidade').innerText = 'Por favor, preencha este campo.';
+                valid = false;
+            } else {
+                document.getElementById('error-cidade').innerText = '';
+            }
+
+            // Validar estado
+            if (estado === '') {
+                document.getElementById('error-estado').innerText = 'Por favor, selecione um estado.';
+                valid = false;
+            } else {
+                document.getElementById('error-estado').innerText = '';
+            }
+
+            // Validar nome do projeto
+            if (nomeProjeto === '') {
+                document.getElementById('error-nome-projeto').innerText = 'Por favor, preencha este campo.';
+                valid = false;
+            } else {
+                document.getElementById('error-nome-projeto').innerText = '';
+            }
+
+            // Se todos os campos forem válidos, simular um processo de cadastro
+            if (valid) {
+                const confirmationDiv = document.getElementById('confirmation');
+                confirmationDiv.style.display = 'block';
+                document.getElementById('confirmation-message').innerText = `Cadastro realizado com sucesso para ${nome} (${email})!`;
+
+                // Limpar o formulário após o cadastro
+                document.querySelector('form').reset();
+
+                // Esconder mensagem após 5 segundos
+                setTimeout(function() {
+                    confirmationDiv.style.display = 'none';
+                }, 5000);
+            }
+
+            return false; // Para garantir que o formulário não seja enviado
+        }
+    </script>
+</body>
+</html>
